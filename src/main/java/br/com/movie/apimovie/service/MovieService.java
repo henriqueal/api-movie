@@ -37,8 +37,8 @@ public class MovieService {
 
 			IntervaloProdutor intervaloProdutor = entry.getValue();
 
-			atualizaMinList(minList, intervaloProdutor);
-			atualizaMaxList(maxList, intervaloProdutor);
+			minList = atualizaMinList(minList, intervaloProdutor);
+			maxList = atualizaMaxList(maxList, intervaloProdutor);
 
 		}
 
@@ -49,8 +49,8 @@ public class MovieService {
 
 	}
 
-	private void atualizaMaxList(List<IntervaloPremio> maxList, IntervaloProdutor intervaloProdutor) {
-		if (intervaloProdutor.getMaxInterval().equals(maxIntervalGlobal)) {
+	private List<IntervaloPremio> atualizaMaxList(List<IntervaloPremio> maxList, IntervaloProdutor intervaloProdutor) {
+		if (intervaloProdutor.getMaxInterval() == maxIntervalGlobal) {
 			IntervaloPremio intervaloPremioMax = new IntervaloPremio();
 			intervaloPremioMax.setInterval(intervaloProdutor.getMaxInterval());
 			intervaloPremioMax.setPreviousWin(intervaloProdutor.getMaxPreviousWin());
@@ -58,10 +58,11 @@ public class MovieService {
 			intervaloPremioMax.setProducer(intervaloProdutor.getProducer());
 			maxList.add(intervaloPremioMax);
 		}
+		return maxList;
 	}
 
-	private void atualizaMinList(List<IntervaloPremio> minList, IntervaloProdutor intervaloProdutor) {
-		if (intervaloProdutor.getMinInterval().equals(minIntervalGlobal)) {
+	private List<IntervaloPremio> atualizaMinList(List<IntervaloPremio> minList, IntervaloProdutor intervaloProdutor) {
+		if (intervaloProdutor.getMinInterval() == minIntervalGlobal) {
 			IntervaloPremio intervaloPremioMin = new IntervaloPremio();
 			intervaloPremioMin.setInterval(intervaloProdutor.getMinInterval());
 			intervaloPremioMin.setPreviousWin(intervaloProdutor.getMinPreviousWin());
@@ -69,6 +70,7 @@ public class MovieService {
 			intervaloPremioMin.setProducer(intervaloProdutor.getProducer());
 			minList.add(intervaloPremioMin);
 		}
+		return minList;
 	}
 
 	private Map<String, IntervaloProdutor> criaMap(List<Movie> movies) {

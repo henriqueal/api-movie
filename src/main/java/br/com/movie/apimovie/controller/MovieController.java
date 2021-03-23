@@ -16,9 +16,8 @@ public class MovieController {
 	@Autowired
 	private MovieService movieService;
 	
-	@GetMapping(value= "/buscaIntervaloDePremios")
+	@GetMapping(value= "/intervaloPremioView")
 	public ResponseEntity<IntervaloPremioView> buscaIntervaloDePremios() {
 		return ResponseEntity.ok(movieService.buscaIntervaloDePremios());
-	}
-	
+	}	
 }
