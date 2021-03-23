@@ -1,3 +1,11 @@
+## Requisitos
+Java 11
+
+## Configuração BD
+Para importar os dados no BD, basta alterar o seguinte arquivo:
+```
+./src/main/resources/movielist.csv
+```
 
 ## Desenvolvimento
 
@@ -8,3 +16,26 @@ cd "diretorio de sua preferencia"
 git clone https://github.com/henriqueal/api-movie
 ```
 
+### Construção
+
+Para construir o projeto com o Maven, executar os comando abaixo:
+
+```shell
+mvn clean package
+```
+
+## Testes
+
+### Configurando
+Altere o Json esperado de resposta que se encontra no seguinte arquivo:
+
+```
+./src/main/resources/response.json
+```
+
+### Rodando
+Para rodar os testes, utilize o comando abaixo:
+
+```
+mvn test
+```
