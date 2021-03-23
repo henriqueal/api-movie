@@ -39,3 +39,12 @@ Para rodar os testes, utilize o comando abaixo:
 ```
 mvn test
 ```
+
+## Rodar o projeto
+Basta executar o jar gerado no target
+```
+java -jar target/api-movie-0.0.1-SNAPSHOT.jar
+```
+
+## Consumindo a API
+http://localhost:8080/intervaloPremioView
