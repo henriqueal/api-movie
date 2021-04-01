@@ -20,8 +20,8 @@ public class MovieService {
 	@Autowired
 	private MovieRepository movieRepository;
 
-	Integer minIntervalGlobal=null;
-	Integer maxIntervalGlobal=null;
+	Integer minIntervalGlobal = null;
+	Integer maxIntervalGlobal = null;
 
 	public IntervaloPremioView buscaIntervaloDePremios() {
 
