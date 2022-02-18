@@ -48,3 +48,6 @@ java -jar target/api-movie-0.0.1-SNAPSHOT.jar
 
 ## Consumindo a API
 http://localhost:8080/intervaloPremioView
+
+
+Teste
